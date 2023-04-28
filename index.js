@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 4000;
 
 
 
-//middleware
+// Middlewares 
 app.use(express.json());
 
 
-
+// Mounted Routes and Controllers/Handler/Business Logic 
 const todoRoutes = require('./routes/todos');
 app.use("/api/v1", todoRoutes)
 
@@ -21,13 +21,12 @@ app.listen(PORT,()=>{
 })
 
 
-// DB connetion
-
+// Database Connection
 const dbConnect = require('./config/database')
 dbConnect();
 
 
-//default route
+//Default route
 app.get('/',(req,res)=>{
     res.send('<h1>Welcome to Backend HOMEPAGE</h1>');
 })

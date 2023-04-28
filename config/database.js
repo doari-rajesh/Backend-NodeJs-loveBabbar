@@ -12,7 +12,7 @@ const dbConnect = () => {
       console.log(`DB ka connection is successfull`);
     })
     .catch((error) => {
-      console.log('Issue in DB connection');
+      console.log("Issue in DB connection");
       console.error(error.message);
       process.exit(1);
     });

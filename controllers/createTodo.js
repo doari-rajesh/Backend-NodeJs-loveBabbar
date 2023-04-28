@@ -3,7 +3,6 @@ const { request, response } = require("express");
 const Todo = require("../models/todo");
 
 // define route handler
-
 exports.createTodo = async (req, res) => {
   try {
     // extract title and description from request body
