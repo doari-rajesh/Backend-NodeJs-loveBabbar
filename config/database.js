@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//import dotenv
 require("dotenv").config();
 
 const dbConnect = () => {
@@ -9,12 +10,11 @@ const dbConnect = () => {
       useUnifiedTopology: true,
     })
     .then(() => {
-      console.log(`DB ka connection is successfull`);
+      console.log("DB Ka Connection is Successfull");
     })
     .catch((error) => {
-      console.log("Issue in DB connection");
+      console.log(error);
       console.error(error.message);
-      process.exit(1);
     });
 };
 
